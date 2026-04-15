@@ -1,0 +1,49 @@
+{
+  "name": "@proof-of-vault/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sync:skill": "node scripts/sync-agent-skill.mjs",
+    "dev": "node scripts/sync-agent-skill.mjs && next dev -p 3000",
+    "build": "node scripts/sync-agent-skill.mjs && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "node scripts/sync-agent-skill.mjs && tsc --noEmit"
+  },
+  "dependencies": {
+    "@appletosolutions/reactbits": "^1.0.3",
+    "@chakra-ui/react": "^3.34.0",
+    "@its-thepoe/dither-react": "^0.2.0",
+    "@proof-of-vault/shared-types": "workspace:*",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/postprocessing": "^2.16.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "gl-matrix": "^3.4.4",
+    "gsap": "^3.14.2",
+    "matter-js": "^0.20.0",
+    "next": "14.2.35",
+    "ogl": "^1.0.11",
+    "postprocessing": "^6.35.3",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwind-merge": "^3.5.0",
+    "three": "^0.160.0",
+    "viem": "2.47.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.183.1",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.2.35",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "postcss": "^8.4.0",
+    "shadcn": "^4.2.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0"
+  }
+}

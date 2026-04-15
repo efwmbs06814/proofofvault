@@ -1,0 +1,15 @@
+[Unit]
+Description=Proof of Vault API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/proofofvault
+EnvironmentFile=/opt/proofofvault/apps/api/.env.production
+ExecStart=/usr/bin/env bash -lc 'corepack pnpm --filter @proof-of-vault/api start'
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target

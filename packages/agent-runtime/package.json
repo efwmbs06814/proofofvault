@@ -1,0 +1,21 @@
+{
+  "name": "@proof-of-vault/agent-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run --config ../../vitest.config.mjs --configLoader native",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@proof-of-vault/shared-types": "workspace:*",
+    "viem": "^2.28.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}

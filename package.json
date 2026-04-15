@@ -1,0 +1,17 @@
+{
+  "name": "proof-of-vault",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "dev": "corepack pnpm --parallel --filter @proof-of-vault/api --filter @proof-of-vault/web dev",
+    "dev:api": "corepack pnpm --filter @proof-of-vault/api dev",
+    "dev:web": "corepack pnpm --filter @proof-of-vault/web dev",
+    "build": "corepack pnpm --filter @proof-of-vault/web build",
+    "db:generate": "corepack pnpm --filter @proof-of-vault/api db:generate",
+    "db:migrate": "corepack pnpm --filter @proof-of-vault/api db:migrate",
+    "test": "corepack pnpm --filter @proof-of-vault/shared-types test && corepack pnpm --filter @proof-of-vault/agent-runtime test && corepack pnpm --filter @proof-of-vault/api test",
+    "typecheck": "corepack pnpm --filter @proof-of-vault/shared-types typecheck && corepack pnpm --filter @proof-of-vault/agent-runtime typecheck && corepack pnpm --filter @proof-of-vault/api typecheck && corepack pnpm --filter @proof-of-vault/web typecheck",
+    "lint:web": "corepack pnpm --filter @proof-of-vault/web lint"
+  }
+}
